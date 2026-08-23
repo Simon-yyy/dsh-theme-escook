@@ -1,0 +1,5 @@
+# dsh-theme-escook bundle patch
+# Mount the theme plugin into DeepSeek Harness profile
+- insert:
+    - id: dsh-theme-escook
+      name: 'dsh-theme-escook'

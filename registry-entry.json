@@ -1,0 +1,18 @@
+{
+  "name": "dsh-theme-escook",
+  "owner": "Simon-yyy",
+  "url": "https://github.com/Simon-yyy/dsh-theme-escook",
+  "category": "theme",
+  "description": {
+    "zh": "🌸 彬哥の经典主题 (escook-theme)：专为 DeepSeek Harness 设计的暗夜紫调与标志性琥珀金高亮美学主题，经典语法高亮与全界面沉浸适配。",
+    "en": "🌸 Escook Theme: Signature dark violet & amber gold aesthetic theme crafted for DeepSeek Harness Web GUI & Desktop with vibrant syntax highlighting."
+  },
+  "keywords": [
+    "theme",
+    "escook",
+    "escook-theme",
+    "dark",
+    "syntax-highlight"
+  ],
+  "install": "dsh plugin --profile web add dsh-theme-escook"
+}
