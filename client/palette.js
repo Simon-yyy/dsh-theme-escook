@@ -1,46 +1,58 @@
 /**
- * Escook Theme Color Palettes Definition
+ * Escook Theme Color Palettes Definition (Redesigned & Modernized)
  */
 
 export const PALETTES = {
   dark: {
-    bgBase: "#252526",
-    bgSidebar: "#202020",
-    bgSurface: "#29292c",
-    accent: "#EF820C",
-    accentHover: "#ff9940",
-    textPrimary: "#fafafa",
-    textSecondary: "#cccccc",
-    border: "#383838"
+    name: "escook Dark (经典暗黑)",
+    desc: "沉浸深邃蓝黑底色搭配极光日落金橙，现代极客硬朗质感",
+    type: "dark",
+    bgBase: "#14171F",
+    bgSidebar: "#0E1017",
+    bgSurface: "#1B1F2A",
+    accent: "#FF8400",
+    accentHover: "#FFA033",
+    textPrimary: "#F4F6FB",
+    textSecondary: "#9CA3AF",
+    border: "#2A3042"
   },
   darkSoft: {
-    bgBase: "#1f2430",
-    bgSidebar: "#191e2a",
-    bgSurface: "#232834",
-    accent: "#ffcc66",
-    accentHover: "#fac761",
-    textPrimary: "#cbccc6",
-    textSecondary: "#969aa4",
-    border: "#373e4c"
+    name: "escook Dark Soft (柔和暗黑)",
+    desc: "温润哑光深青夜幕底色搭配柔和琥珀流金，长效护眼防疲劳",
+    type: "dark",
+    bgBase: "#1A1E29",
+    bgSidebar: "#141720",
+    bgSurface: "#212735",
+    accent: "#F6C177",
+    accentHover: "#FAD49E",
+    textPrimary: "#D5DAE5",
+    textSecondary: "#8C95A6",
+    border: "#2B3242"
   },
   light: {
-    bgBase: "#FDF6E3",
-    bgSidebar: "#F5EEDB",
-    bgSurface: "#EDE5D0",
-    accent: "#705697",
-    accentHover: "#8a6ab8",
-    textPrimary: "#2b2b2b",
-    textSecondary: "#4a5c63",
-    border: "#d3cbb7"
+    name: "escook Light (经典紫韵浅色)",
+    desc: "法式法兰绒暖米白搭配典雅皇家罗兰紫，极富书卷杂志质感",
+    type: "light",
+    bgBase: "#FAF8F5",
+    bgSidebar: "#F3EFEA",
+    bgSurface: "#FFFFFF",
+    accent: "#7C3AED",
+    accentHover: "#8B5CF6",
+    textPrimary: "#1E1B24",
+    textSecondary: "#524E5B",
+    border: "#E6E0D8"
   },
   lightSoft: {
-    bgBase: "#FAFAFA",
-    bgSidebar: "#F0F0F0",
+    name: "escook Light Soft (柔和浅色)",
+    desc: "清透微晨纯白搭配活力蜜柑亮橙，清爽明亮不刺眼",
+    type: "light",
+    bgBase: "#F8FAFC",
+    bgSidebar: "#F1F5F9",
     bgSurface: "#FFFFFF",
-    accent: "#ff9940",
-    accentHover: "#ffaa5e",
-    textPrimary: "#1F2937",
-    textSecondary: "#4B5563",
-    border: "#E5E7EB"
+    accent: "#FF6B00",
+    accentHover: "#FF8533",
+    textPrimary: "#0F172A",
+    textSecondary: "#475569",
+    border: "#E2E8F0"
   }
 };
