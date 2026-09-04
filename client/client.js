@@ -4,212 +4,283 @@
 
 export const THEME_SCHEMES = {
   "dark": {
-    name: "escook Dark (经典暗黑)",
-    desc: "沉浸深邃蓝黑底色搭配极光日落金橙，现代极客硬朗质感",
+    name: "escook Dark (经典暗黑 · 标志暖阳橙)",
+    desc: "VS Code 彬哥经典暖调极客深灰搭配标志暖阳橙，正统耐看长效护眼",
     type: "dark",
-    colorPreview: "#FF8400",
-    bgPreview: "#14171F",
+    colorPreview: "#ef820c",
+    bgPreview: "#252526",
     css: `
       :root, html, body, body[data-ds-dark-theme], [data-theme="escook-dark"] {
-        --dsw-alias-bg-base: #14171F !important;
-        --dsw-alias-bg-layer-1: #0E1017 !important;
-        --dsw-alias-bg-layer-2: #1B1F2A !important;
-        --dsw-alias-bg-mask-1: rgba(10, 12, 18, 0.75) !important;
-        --dsw-specific-sidebar-fill: #0E1017 !important;
-        --dsw-specific-sidebar-nav-item-hover: rgba(255, 132, 0, 0.1) !important;
-        --dsw-specific-sidebar-nav-item-active: rgba(255, 132, 0, 0.2) !important;
-        --dsw-specific-sidebar-nav-item-active-accent: #FF8400 !important;
-        --dsw-specific-input-major: #1B1F2A !important;
-        --dsw-specific-bubble: #1B1F2A !important;
-        --dsw-specific-menu: #161922 !important;
-        --dsw-hovercard-bg: #161922 !important;
-        --dsw-alias-tooltip-bg: #222736 !important;
-        --dsw-alias-button-elevated-fill: #1B1F2A !important;
-        --dsw-alias-button-floating-hover: #262C3D !important;
-        --dsw-alias-brand-primary: #FF8400 !important;
-        --dsw-alias-button-primary-fill: #FF8400 !important;
-        --dsw-alias-button-primary-hover: #FFA033 !important;
-        --dsw-alias-label-primary-foreground: #000000 !important;
-        --dsw-alias-label-primary: #F4F6FB !important;
-        --dsw-alias-label-secondary: #9CA3AF !important;
-        --dsw-alias-label-tertiary: #6B7280 !important;
-        --dsw-alias-label-dimmed: #4B5563 !important;
-        --dsw-alias-label-caption: #6B7280 !important;
-        --dsw-alias-interactive-bg-hover: rgba(255, 132, 0, 0.1) !important;
-        --dsw-alias-interactive-bg-active: rgba(255, 132, 0, 0.2) !important;
-        --dsw-alias-border-l1: #2A3042 !important;
-        --dsw-alias-border-l2: #212635 !important;
-        --dsw-alias-border-l3: #384058 !important;
-        --dsw-alias-border-l4: #4B5563 !important;
-        --dsw-alias-markdown-code-block: #0C0E14 !important;
-        --dsw-alias-markdown-code-block-banner: #14171F !important;
-        --dsw-alias-scrollbar-bg-l2: #2A3042 !important;
-        --dsw-alias-scrollbar-hover-l2: #FF8400 !important;
+        --dsw-alias-bg-base: #252526 !important;
+        --dsw-alias-bg-layer-1: #202021 !important;
+        --dsw-alias-bg-layer-2: #29292c !important;
+        --dsw-alias-bg-layer-3: #2d2d30 !important;
+        --dsw-alias-bg-module-platform: #2d2d30 !important;
+        --dsw-alias-bg-multi-select: #2d2d30 !important;
+        --dsw-alias-bg-overlay: #333333 !important;
+        --dsw-specific-selector: #2d2d30 !important;
+        --dsw-alias-bg-mask-1: rgba(18, 18, 20, 0.75) !important;
+        --dsw-specific-sidebar-fill: #202021 !important;
+        --dsw-specific-sidebar-nav-item-hover: rgba(239, 130, 12, 0.1) !important;
+        --dsw-specific-sidebar-nav-item-active: rgba(239, 130, 12, 0.2) !important;
+        --dsw-specific-sidebar-nav-item-active-accent: #ef820c !important;
+        --dsw-specific-input-major: #29292c !important;
+        --dsw-specific-bubble: #29292c !important;
+        --dsw-specific-menu: #202021 !important;
+        --dsw-hovercard-bg: #29292c !important;
+        --dsw-alias-tooltip-bg: #1c1c1d !important;
+        --dsw-alias-button-elevated-fill: #2f2f33 !important;
+        --dsw-alias-button-floating-hover: #38383c !important;
+        --dsw-alias-brand-primary: #ef820c !important;
+        --dsw-alias-button-primary-fill: #ef820c !important;
+        --dsw-alias-button-primary-hover: #ff9940 !important;
+        --dsw-alias-label-primary-foreground: #ffffff !important;
+        --dsw-alias-label-primary: #fafafa !important;
+        --dsw-alias-label-secondary: #cccccc !important;
+        --dsw-alias-label-tertiary: #888888 !important;
+        --dsw-alias-label-dimmed: #555555 !important;
+        --dsw-alias-label-caption: #888888 !important;
+        --dsw-alias-interactive-bg-hover: rgba(239, 130, 12, 0.1) !important;
+        --dsw-alias-interactive-bg-active: rgba(239, 130, 12, 0.2) !important;
+        --dsw-alias-border-l1: #333333 !important;
+        --dsw-alias-border-l2: #2a2a2a !important;
+        --dsw-alias-border-l3: #3e3e3e !important;
+        --dsw-alias-border-l4: #555555 !important;
+        --dsw-alias-markdown-code-block: #1c1c1d !important;
+        --dsw-alias-markdown-code-block-banner: #252526 !important;
+        --dsw-alias-scrollbar-bg-l2: #333333 !important;
+        --dsw-alias-scrollbar-hover-l2: #ef820c !important;
       }
-      body, body[data-ds-dark-theme] { background-color: #14171F !important; color: #F4F6FB !important; }
+      body, body[data-ds-dark-theme] { background-color: #252526 !important; color: #fafafa !important; }
       pre, code, [class*="codeBlock"] {
-        background-color: #0C0E14 !important;
-        color: #F4F6FB !important;
-        border-color: #2A3042 !important;
+        background-color: #1c1c1d !important;
+        color: #fafafa !important;
+        border-color: #333333 !important;
+      }
+      [class*="selector"], [class*="themeCube"] {
+        color: #fafafa !important;
+        background-color: #2d2d30 !important;
+      }
+      [class*="selected"], [class*="themeCube"]:hover {
+        border-color: #ef820c !important;
       }
     `
   },
   "dark-soft": {
-    name: "escook Dark Soft (柔和暗黑)",
-    desc: "温润哑光深青夜幕底色搭配柔和琥珀流金，长效护眼防疲劳",
+    name: "escook Dark Soft (柔和暗黑 · 柔光奶杏黄)",
+    desc: "Ayu 经典深海蓝灰底色搭配温润奶杏黄，细腻柔和长效防疲劳",
     type: "dark",
-    colorPreview: "#F6C177",
-    bgPreview: "#1A1E29",
+    colorPreview: "#ffcc66",
+    bgPreview: "#1f2430",
     css: `
       :root, html, body, body[data-ds-dark-theme], [data-theme="escook-dark-soft"] {
-        --dsw-alias-bg-base: #1A1E29 !important;
-        --dsw-alias-bg-layer-1: #141720 !important;
-        --dsw-alias-bg-layer-2: #212735 !important;
-        --dsw-alias-bg-mask-1: rgba(14, 16, 24, 0.7) !important;
-        --dsw-specific-sidebar-fill: #141720 !important;
-        --dsw-specific-sidebar-nav-item-hover: rgba(246, 193, 119, 0.1) !important;
-        --dsw-specific-sidebar-nav-item-active: rgba(246, 193, 119, 0.18) !important;
-        --dsw-specific-sidebar-nav-item-active-accent: #F6C177 !important;
-        --dsw-specific-input-major: #212735 !important;
-        --dsw-specific-bubble: #212735 !important;
-        --dsw-specific-menu: #1B202B !important;
-        --dsw-hovercard-bg: #1B202B !important;
-        --dsw-alias-tooltip-bg: #293042 !important;
-        --dsw-alias-button-elevated-fill: #212735 !important;
-        --dsw-alias-button-floating-hover: #2B3346 !important;
-        --dsw-alias-brand-primary: #F6C177 !important;
-        --dsw-alias-button-primary-fill: #F6C177 !important;
-        --dsw-alias-button-primary-hover: #FAD49E !important;
-        --dsw-alias-label-primary-foreground: #1A1E29 !important;
-        --dsw-alias-label-primary: #D5DAE5 !important;
-        --dsw-alias-label-secondary: #8C95A6 !important;
-        --dsw-alias-label-tertiary: #677082 !important;
-        --dsw-alias-label-dimmed: #4E5666 !important;
-        --dsw-alias-label-caption: #677082 !important;
-        --dsw-alias-interactive-bg-hover: rgba(246, 193, 119, 0.1) !important;
-        --dsw-alias-interactive-bg-active: rgba(246, 193, 119, 0.18) !important;
-        --dsw-alias-border-l1: #2B3242 !important;
-        --dsw-alias-border-l2: #232938 !important;
-        --dsw-alias-border-l3: #3B4459 !important;
-        --dsw-alias-border-l4: #4E5666 !important;
-        --dsw-alias-markdown-code-block: #12151D !important;
-        --dsw-alias-markdown-code-block-banner: #181C26 !important;
-        --dsw-alias-scrollbar-bg-l2: #2B3242 !important;
-        --dsw-alias-scrollbar-hover-l2: #F6C177 !important;
+        --dsw-alias-bg-base: #1f2430 !important;
+        --dsw-alias-bg-layer-1: #191e28 !important;
+        --dsw-alias-bg-layer-2: #232834 !important;
+        --dsw-alias-bg-layer-3: #262c3b !important;
+        --dsw-alias-bg-module-platform: #262c3b !important;
+        --dsw-alias-bg-multi-select: #262c3b !important;
+        --dsw-alias-bg-overlay: #333a4c !important;
+        --dsw-specific-selector: #262c3b !important;
+        --dsw-alias-bg-mask-1: rgba(16, 20, 28, 0.7) !important;
+        --dsw-specific-sidebar-fill: #191e28 !important;
+        --dsw-specific-sidebar-nav-item-hover: rgba(255, 204, 102, 0.1) !important;
+        --dsw-specific-sidebar-nav-item-active: rgba(255, 204, 102, 0.18) !important;
+        --dsw-specific-sidebar-nav-item-active-accent: #ffcc66 !important;
+        --dsw-specific-input-major: #232834 !important;
+        --dsw-specific-bubble: #232834 !important;
+        --dsw-specific-menu: #191e28 !important;
+        --dsw-hovercard-bg: #191e28 !important;
+        --dsw-alias-tooltip-bg: #171b24 !important;
+        --dsw-alias-button-elevated-fill: #2b3140 !important;
+        --dsw-alias-button-floating-hover: #333a4c !important;
+        --dsw-alias-brand-primary: #ffcc66 !important;
+        --dsw-alias-button-primary-fill: #ffcc66 !important;
+        --dsw-alias-button-primary-hover: #ffd580 !important;
+        --dsw-alias-label-primary-foreground: #1f2430 !important;
+        --dsw-alias-label-primary: #cbccc6 !important;
+        --dsw-alias-label-secondary: #969aa4 !important;
+        --dsw-alias-label-tertiary: #707a8c !important;
+        --dsw-alias-label-dimmed: #515764 !important;
+        --dsw-alias-label-caption: #707a8c !important;
+        --dsw-alias-interactive-bg-hover: rgba(255, 204, 102, 0.1) !important;
+        --dsw-alias-interactive-bg-active: rgba(255, 204, 102, 0.18) !important;
+        --dsw-alias-border-l1: #373e4c !important;
+        --dsw-alias-border-l2: #2d3340 !important;
+        --dsw-alias-border-l3: #444c5e !important;
+        --dsw-alias-border-l4: #515764 !important;
+        --dsw-alias-markdown-code-block: #171b24 !important;
+        --dsw-alias-markdown-code-block-banner: #1f2430 !important;
+        --dsw-alias-scrollbar-bg-l2: #373e4c !important;
+        --dsw-alias-scrollbar-hover-l2: #ffcc66 !important;
       }
-      body, body[data-ds-dark-theme] { background-color: #1A1E29 !important; color: #D5DAE5 !important; }
+      body, body[data-ds-dark-theme] { background-color: #1f2430 !important; color: #cbccc6 !important; }
       pre, code, [class*="codeBlock"] {
-        background-color: #12151D !important;
-        color: #D5DAE5 !important;
-        border-color: #2B3242 !important;
+        background-color: #171b24 !important;
+        color: #cbccc6 !important;
+        border-color: #373e4c !important;
+      }
+      [class*="selector"], [class*="themeCube"] {
+        color: #cbccc6 !important;
+        background-color: #262c3b !important;
+      }
+      [class*="selected"], [class*="themeCube"]:hover {
+        border-color: #ffcc66 !important;
       }
     `
   },
   "light": {
-    name: "escook Light (经典紫韵浅色)",
-    desc: "法式法兰绒暖米白搭配典雅皇家罗兰紫，极富书卷杂志质感",
+    name: "escook Light (经典浅色 · 典雅紫罗兰)",
+    desc: "Solarized 经典护眼暖米白搭配典雅紫罗兰与青墨文本，温润纸质书卷感",
     type: "light",
-    colorPreview: "#7C3AED",
-    bgPreview: "#FAF8F5",
+    colorPreview: "#705697",
+    bgPreview: "#fdf6e3",
     css: `
       :root, html, body, body[data-ds-dark-theme], [data-theme="escook-light"] {
-        --dsw-alias-bg-base: #FAF8F5 !important;
-        --dsw-alias-bg-layer-1: #F3EFEA !important;
-        --dsw-alias-bg-layer-2: #FFFFFF !important;
-        --dsw-alias-bg-mask-1: rgba(60, 50, 70, 0.3) !important;
-        --dsw-specific-sidebar-fill: #F3EFEA !important;
-        --dsw-specific-sidebar-nav-item-hover: rgba(124, 58, 237, 0.08) !important;
-        --dsw-specific-sidebar-nav-item-active: rgba(124, 58, 237, 0.16) !important;
-        --dsw-specific-sidebar-nav-item-active-accent: #7C3AED !important;
-        --dsw-specific-input-major: #FFFFFF !important;
-        --dsw-specific-bubble: #FFFFFF !important;
-        --dsw-specific-menu: #FFFFFF !important;
-        --dsw-hovercard-bg: #FFFFFF !important;
-        --dsw-alias-tooltip-bg: #1E1B24 !important;
-        --dsw-alias-button-elevated-fill: #FFFFFF !important;
-        --dsw-alias-button-floating-hover: #F3EFEA !important;
-        --dsw-alias-brand-primary: #7C3AED !important;
-        --dsw-alias-button-primary-fill: #7C3AED !important;
-        --dsw-alias-button-primary-hover: #8B5CF6 !important;
-        --dsw-alias-label-primary-foreground: #FFFFFF !important;
-        --dsw-alias-label-primary: #1E1B24 !important;
-        --dsw-alias-label-secondary: #524E5B !important;
-        --dsw-alias-label-tertiary: #716C7B !important;
-        --dsw-alias-label-dimmed: #9A94A4 !important;
-        --dsw-alias-label-caption: #716C7B !important;
-        --dsw-alias-interactive-bg-hover: rgba(124, 58, 237, 0.08) !important;
-        --dsw-alias-interactive-bg-active: rgba(124, 58, 237, 0.15) !important;
-        --dsw-alias-border-l1: #E6E0D8 !important;
-        --dsw-alias-border-l2: #F0EAE2 !important;
-        --dsw-alias-border-l3: #DDD6CE !important;
-        --dsw-alias-border-l4: #9A94A4 !important;
-        --dsw-alias-markdown-code-block: #F4EFE9 !important;
-        --dsw-alias-markdown-code-block-banner: #EAE3DA !important;
-        --dsw-alias-scrollbar-bg-l2: #E6E0D8 !important;
-        --dsw-alias-scrollbar-hover-l2: #7C3AED !important;
+        --dsw-alias-bg-base: #fdf6e3 !important;
+        --dsw-alias-bg-layer-1: #f8f0d8 !important;
+        --dsw-alias-bg-layer-2: #ffffff !important;
+        --dsw-alias-bg-layer-3: #eee8d5 !important;
+        --dsw-alias-bg-module-platform: #eee8d5 !important;
+        --dsw-alias-bg-multi-select: #eee8d5 !important;
+        --dsw-alias-bg-overlay: #e3dac6 !important;
+        --dsw-specific-selector: #eee8d5 !important;
+        --dsw-alias-bg-mask-1: rgba(50, 40, 60, 0.25) !important;
+        --dsw-specific-sidebar-fill: #f8f0d8 !important;
+        --dsw-specific-sidebar-nav-item-hover: rgba(112, 86, 151, 0.08) !important;
+        --dsw-specific-sidebar-nav-item-active: rgba(112, 86, 151, 0.16) !important;
+        --dsw-specific-sidebar-nav-item-active-accent: #705697 !important;
+        --dsw-specific-input-major: #ffffff !important;
+        --dsw-specific-bubble: #ffffff !important;
+        --dsw-specific-menu: #ffffff !important;
+        --dsw-hovercard-bg: #ffffff !important;
+        --dsw-alias-tooltip-bg: #2b2638 !important;
+        --dsw-alias-button-elevated-fill: #f4ecce !important;
+        --dsw-alias-button-floating-hover: #ece2c4 !important;
+        --dsw-alias-brand-primary: #705697 !important;
+        --dsw-alias-button-primary-fill: #705697 !important;
+        --dsw-alias-button-primary-hover: #876cad !important;
+        --dsw-alias-label-primary-foreground: #ffffff !important;
+        --dsw-alias-label-primary: #586e75 !important;
+        --dsw-alias-label-secondary: #657b83 !important;
+        --dsw-alias-label-tertiary: #93a1a1 !important;
+        --dsw-alias-label-dimmed: #b58900 !important;
+        --dsw-alias-label-caption: #93a1a1 !important;
+        --dsw-alias-interactive-bg-hover: rgba(112, 86, 151, 0.08) !important;
+        --dsw-alias-interactive-bg-active: rgba(112, 86, 151, 0.15) !important;
+        --dsw-alias-border-l1: #e3dac6 !important;
+        --dsw-alias-border-l2: #ece3cf !important;
+        --dsw-alias-border-l3: #d8ceb8 !important;
+        --dsw-alias-border-l4: #b58900 !important;
+        --dsw-alias-markdown-code-block: #f5eed8 !important;
+        --dsw-alias-markdown-code-block-banner: #ebe4cc !important;
+        --dsw-alias-scrollbar-bg-l2: #e3dac6 !important;
+        --dsw-alias-scrollbar-hover-l2: #705697 !important;
       }
-      body, body[data-ds-dark-theme] { background-color: #FAF8F5 !important; color: #1E1B24 !important; }
+      body, body[data-ds-dark-theme] { background-color: #fdf6e3 !important; color: #586e75 !important; }
       pre, code, [class*="codeBlock"] {
-        background-color: #F4EFE9 !important;
-        color: #1E1B24 !important;
-        border-color: #E6E0D8 !important;
+        background-color: #f5eed8 !important;
+        color: #586e75 !important;
+        border-color: #e3dac6 !important;
+      }
+      [class*="selector"], [class*="themeCube"] {
+        color: #586e75 !important;
+        background-color: #eee8d5 !important;
+      }
+      [class*="selected"], [class*="themeCube"]:hover {
+        border-color: #705697 !important;
       }
     `
   },
   "light-soft": {
-    name: "escook Light Soft (柔和浅色)",
-    desc: "清透微晨纯白搭配活力蜜柑亮橙，清爽明亮不刺眼",
+    name: "escook Light Soft (柔和浅色 · 活力柔和橙)",
+    desc: "现代极简清透浅灰搭配柔和活力橙，明亮清爽不刺眼",
     type: "light",
-    colorPreview: "#FF6B00",
-    bgPreview: "#F8FAFC",
+    colorPreview: "#ff9940",
+    bgPreview: "#fafafa",
     css: `
       :root, html, body, body[data-ds-dark-theme], [data-theme="escook-light-soft"] {
-        --dsw-alias-bg-base: #F8FAFC !important;
-        --dsw-alias-bg-layer-1: #F1F5F9 !important;
-        --dsw-alias-bg-layer-2: #FFFFFF !important;
-        --dsw-alias-bg-mask-1: rgba(0, 0, 0, 0.25) !important;
-        --dsw-specific-sidebar-fill: #F1F5F9 !important;
-        --dsw-specific-sidebar-nav-item-hover: rgba(255, 107, 0, 0.08) !important;
-        --dsw-specific-sidebar-nav-item-active: rgba(255, 107, 0, 0.16) !important;
-        --dsw-specific-sidebar-nav-item-active-accent: #FF6B00 !important;
-        --dsw-specific-input-major: #FFFFFF !important;
-        --dsw-specific-bubble: #FFFFFF !important;
-        --dsw-specific-menu: #FFFFFF !important;
-        --dsw-hovercard-bg: #FFFFFF !important;
-        --dsw-alias-tooltip-bg: #0F172A !important;
-        --dsw-alias-button-elevated-fill: #FFFFFF !important;
-        --dsw-alias-button-floating-hover: #F1F5F9 !important;
-        --dsw-alias-brand-primary: #FF6B00 !important;
-        --dsw-alias-button-primary-fill: #FF6B00 !important;
-        --dsw-alias-button-primary-hover: #FF8533 !important;
-        --dsw-alias-label-primary-foreground: #FFFFFF !important;
-        --dsw-alias-label-primary: #0F172A !important;
-        --dsw-alias-label-secondary: #475569 !important;
-        --dsw-alias-label-tertiary: #64748B !important;
-        --dsw-alias-label-dimmed: #94A3B8 !important;
-        --dsw-alias-label-caption: #64748B !important;
-        --dsw-alias-interactive-bg-hover: rgba(255, 107, 0, 0.08) !important;
-        --dsw-alias-interactive-bg-active: rgba(255, 107, 0, 0.15) !important;
-        --dsw-alias-border-l1: #E2E8F0 !important;
-        --dsw-alias-border-l2: #F1F5F9 !important;
-        --dsw-alias-border-l3: #CBD5E1 !important;
-        --dsw-alias-border-l4: #94A3B8 !important;
-        --dsw-alias-markdown-code-block: #F1F5F9 !important;
-        --dsw-alias-markdown-code-block-banner: #E2E8F0 !important;
-        --dsw-alias-scrollbar-bg-l2: #E2E8F0 !important;
-        --dsw-alias-scrollbar-hover-l2: #FF6B00 !important;
+        --dsw-alias-bg-base: #fafafa !important;
+        --dsw-alias-bg-layer-1: #f2f2f2 !important;
+        --dsw-alias-bg-layer-2: #ffffff !important;
+        --dsw-alias-bg-layer-3: #e8e8e8 !important;
+        --dsw-alias-bg-module-platform: #e8e8e8 !important;
+        --dsw-alias-bg-multi-select: #e8e8e8 !important;
+        --dsw-alias-bg-overlay: #dcdcdc !important;
+        --dsw-specific-selector: #e8e8e8 !important;
+        --dsw-alias-bg-mask-1: rgba(0, 0, 0, 0.2) !important;
+        --dsw-specific-sidebar-fill: #f2f2f2 !important;
+        --dsw-specific-sidebar-nav-item-hover: rgba(255, 153, 64, 0.08) !important;
+        --dsw-specific-sidebar-nav-item-active: rgba(255, 153, 64, 0.16) !important;
+        --dsw-specific-sidebar-nav-item-active-accent: #ff9940 !important;
+        --dsw-specific-input-major: #ffffff !important;
+        --dsw-specific-bubble: #ffffff !important;
+        --dsw-specific-menu: #ffffff !important;
+        --dsw-hovercard-bg: #ffffff !important;
+        --dsw-alias-tooltip-bg: #2d3748 !important;
+        --dsw-alias-button-elevated-fill: #eaeaea !important;
+        --dsw-alias-button-floating-hover: #e0e0e0 !important;
+        --dsw-alias-brand-primary: #ff9940 !important;
+        --dsw-alias-button-primary-fill: #ff9940 !important;
+        --dsw-alias-button-primary-hover: #f58220 !important;
+        --dsw-alias-label-primary-foreground: #ffffff !important;
+        --dsw-alias-label-primary: #2d3748 !important;
+        --dsw-alias-label-secondary: #4a5568 !important;
+        --dsw-alias-label-tertiary: #718096 !important;
+        --dsw-alias-label-dimmed: #a0aec0 !important;
+        --dsw-alias-label-caption: #718096 !important;
+        --dsw-alias-interactive-bg-hover: rgba(255, 153, 64, 0.08) !important;
+        --dsw-alias-interactive-bg-active: rgba(255, 153, 64, 0.15) !important;
+        --dsw-alias-border-l1: #dcdcdc !important;
+        --dsw-alias-border-l2: #e8e8e8 !important;
+        --dsw-alias-border-l3: #d0d0d0 !important;
+        --dsw-alias-border-l4: #a0aec0 !important;
+        --dsw-alias-markdown-code-block: #f0f2f5 !important;
+        --dsw-alias-markdown-code-block-banner: #e6e9ee !important;
+        --dsw-alias-scrollbar-bg-l2: #dcdcdc !important;
+        --dsw-alias-scrollbar-hover-l2: #ff9940 !important;
       }
-      body, body[data-ds-dark-theme] { background-color: #F8FAFC !important; color: #0F172A !important; }
+      body, body[data-ds-dark-theme] { background-color: #fafafa !important; color: #2d3748 !important; }
       pre, code, [class*="codeBlock"] {
-        background-color: #F1F5F9 !important;
-        color: #0F172A !important;
-        border-color: #E2E8F0 !important;
+        background-color: #f0f2f5 !important;
+        color: #2d3748 !important;
+        border-color: #dcdcdc !important;
+      }
+      [class*="selector"], [class*="themeCube"] {
+        color: #2d3748 !important;
+        background-color: #e8e8e8 !important;
+      }
+      [class*="selected"], [class*="themeCube"]:hover {
+        border-color: #ff9940 !important;
       }
     `
   }
 };
 
 export default function activate(context) {
+  // 环境感知与防冲突协同：若宿主环境为 DSH Desktop 客户端且已原生内置主题，自动注册最新主题并委派托管
+  if (typeof window !== "undefined" && window.__DSH_BUILTIN_THEMES__) {
+    console.info("🌸 [dsh-theme-escook] 检测到当前处于 DSH Desktop 桌面端，正在将插件最新主题矩阵热同步至客户端...");
+    const builtin = window.__DSH_BUILTIN_THEMES__;
+    if (typeof builtin.registerThemes === "function") {
+      builtin.registerThemes(THEME_SCHEMES);
+    }
+    const themeController = {
+      schemes: Object.keys(THEME_SCHEMES),
+      setScheme(key) {
+        builtin.apply(key);
+      },
+      getCurrentScheme() {
+        return builtin.getCurrent();
+      },
+      dispose() {
+        // 由桌面端原生管理生命周期
+      }
+    };
+    window.__ESCOOK_THEME__ = themeController;
+    return themeController;
+  }
+
   const styleId = "dsh-theme-escook-styles";
   const storageKey = "dsh_theme_escook_scheme";
   let styleEl = document.getElementById(styleId);
@@ -228,7 +299,7 @@ export default function activate(context) {
     try {
       localStorage.setItem(storageKey, validKey);
     } catch (e) {}
-    console.log(`🌸 [dsh-theme-escook] 当前激活配色: ${scheme.name}`);
+    console.info(`🌸 [dsh-theme-escook] 当前激活配色: ${scheme.name}`);
   }
 
   let savedScheme = "dark-soft";

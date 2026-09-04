@@ -1,6 +1,6 @@
 {
   "name": "dsh-theme-escook",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "🌸 彬哥の经典主题 (escook-theme) for DeepSeek Harness — 优雅暗夜紫调与琥珀金高亮美学主题",
   "type": "module",
   "main": "lib/index.js",
@@ -37,6 +37,7 @@
   "files": [
     "lib",
     "client",
+    "assets",
     "cordis.patch.yml",
     "README.md",
     "README.zh.md",

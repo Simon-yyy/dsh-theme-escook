@@ -10,6 +10,10 @@
   专为 DeepSeek Harness Web GUI / Desktop 设计的暗夜紫调与琥珀金高亮美学主题。
 </p>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Simon-yyy/dsh-theme-escook/main/assets/preview.png" alt="escook-theme 4 合 1 真实效果预览" width="100%" />
+</p>
+
 ---
 
 ## ✨ 主题特性
@@ -22,6 +26,8 @@
 ---
 
 ## 📦 安装使用
+
+> 💡 **桌面端用户提示**：如果您使用的是 **DSH Desktop 桌面客户端**，客户端内核已原生内置本系列主题，开箱即用，无需在此重复安装。
 
 ### 方法一：通过 DSH 插件市场安装（推荐）
 1. 打开 DeepSeek Harness 桌面端 / Web；

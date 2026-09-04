@@ -14,5 +14,8 @@
     "dark",
     "syntax-highlight"
   ],
+  "screenshots": [
+    "https://raw.githubusercontent.com/Simon-yyy/dsh-theme-escook/main/assets/preview.png"
+  ],
   "install": "dsh plugin --profile web add dsh-theme-escook"
 }

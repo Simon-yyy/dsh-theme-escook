@@ -10,6 +10,10 @@
   A premium dark violet & amber gold aesthetic theme crafted for DeepSeek Harness Web GUI & Desktop.
 </p>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Simon-yyy/dsh-theme-escook/main/assets/preview.png" alt="escook-theme 4-in-1 preview" width="100%" />
+</p>
+
 ---
 
 ## ✨ Features
