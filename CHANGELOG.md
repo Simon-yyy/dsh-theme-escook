@@ -2,6 +2,11 @@
 
 All notable changes to `dsh-theme-escook` will be documented in this file.
 
+## [1.0.2] - 2026-09-25
+
+### Fixed
+- Export the `./client` entry required by DeepSeek Harness client modules, preventing startup failure when this theme is installed.
+
 ## [1.0.1] - 2026-09-04
 
 ### Improved & Fixed
