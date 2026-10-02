@@ -2,6 +2,16 @@
 
 All notable changes to `dsh-theme-escook` will be documented in this file.
 
+## [1.0.4] - 2026-10-02
+
+### 修复
+- 将前端 ESM 源码构建为 `__ModuleLoader__.load` 注册包，修复应用启动时的 `Unexpected token 'export'` 和模块未注册错误。
+- 导出 Cordis `apply` 激活接口，并在卸载时清理插件样式与控制器。
+- `apply` 返回清理函数交给 Cordis 管理，修复仅监听 `dispose` 事件导致真实卸载不清理样式的问题。
+- 激活接口使用箭头函数，避免被实际 Cordis 误判为构造函数而忽略返回的清理函数。
+- 增加浏览器脚本加载、四套主题切换、卸载及真实宿主模块加载器回归验证；打包前强制构建并执行测试。
+- 增加实际 Cordis 的激活、卸载和重新启用回归验证，避免仅用模拟生命周期判定通过。
+
 ## [1.0.3] - 2026-10-02
 
 ### 修复

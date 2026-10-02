@@ -1,16 +1,18 @@
 {
   "name": "dsh-theme-escook",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "🌸 彬哥の经典主题 (escook-theme) for DeepSeek Harness — 优雅暗夜紫调与琥珀金高亮美学主题",
   "type": "module",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "test": "node --test test/client-entry.test.mjs test/runtime-compatibility.test.mjs && node test/verify-themes.mjs"
+    "build": "node scripts/build-client.mjs",
+    "prepack": "npm run build && npm test",
+    "test": "node --test test/client-entry.test.mjs test/runtime-compatibility.test.mjs test/host-loader.test.mjs && node test/verify-themes.mjs"
   },
   "exports": {
     ".": "./lib/index.js",
-    "./client": "./client/client.js",
+    "./client": "./client/client.bundle.js",
     "./package.json": "./package.json"
   },
   "author": "Simon-yyy",
@@ -55,6 +57,7 @@
     "@deepseek-ai/dsh-client-ui-theme": ">=0.0.1-rc.1 <0.1.0 || >=0.1.0-rc.1 <0.2.0-0 || >=0.2.0-rc.2 <0.3.0-0"
   },
   "devDependencies": {
+    "esbuild": "^0.28.2",
     "semver": "^7.7.2"
   },
   "publishConfig": {

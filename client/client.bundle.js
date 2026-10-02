@@ -1,11 +1,39 @@
-/**
- * Escook Theme Client Plugin for DSH (Redesigned Edition)
- */
+// 自动构建产物，请修改 client/client.js 后运行 npm run build。
+window.__ModuleLoader__.load({
+  id: "dsh-theme-escook",
+  factory: (require) => {
+    const module = { exports: {} };
+    const exports = module.exports;
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __getOwnPropNames = Object.getOwnPropertyNames;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __export = (target, all) => {
+  for (var name in all)
+    __defProp(target, name, { get: all[name], enumerable: true });
+};
+var __copyProps = (to, from, except, desc) => {
+  if (from && typeof from === "object" || typeof from === "function") {
+    for (let key of __getOwnPropNames(from))
+      if (!__hasOwnProp.call(to, key) && key !== except)
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+  }
+  return to;
+};
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-export const THEME_SCHEMES = {
+// client/client.js
+var client_exports = {};
+__export(client_exports, {
+  THEME_SCHEMES: () => THEME_SCHEMES,
+  apply: () => apply,
+  default: () => activate
+});
+module.exports = __toCommonJS(client_exports);
+var THEME_SCHEMES = {
   "dark": {
-    name: "escook Dark (经典暗黑 · 标志暖阳橙)",
-    desc: "VS Code 彬哥经典暖调极客深灰搭配标志暖阳橙，正统耐看长效护眼",
+    name: "escook Dark (\u7ECF\u5178\u6697\u9ED1 \xB7 \u6807\u5FD7\u6696\u9633\u6A59)",
+    desc: "VS Code \u5F6C\u54E5\u7ECF\u5178\u6696\u8C03\u6781\u5BA2\u6DF1\u7070\u642D\u914D\u6807\u5FD7\u6696\u9633\u6A59\uFF0C\u6B63\u7EDF\u8010\u770B\u957F\u6548\u62A4\u773C",
     type: "dark",
     colorPreview: "#ef820c",
     bgPreview: "#252526",
@@ -67,8 +95,8 @@ export const THEME_SCHEMES = {
     `
   },
   "dark-soft": {
-    name: "escook Dark Soft (柔和暗黑 · 柔光奶杏黄)",
-    desc: "Ayu 经典深海蓝灰底色搭配温润奶杏黄，细腻柔和长效防疲劳",
+    name: "escook Dark Soft (\u67D4\u548C\u6697\u9ED1 \xB7 \u67D4\u5149\u5976\u674F\u9EC4)",
+    desc: "Ayu \u7ECF\u5178\u6DF1\u6D77\u84DD\u7070\u5E95\u8272\u642D\u914D\u6E29\u6DA6\u5976\u674F\u9EC4\uFF0C\u7EC6\u817B\u67D4\u548C\u957F\u6548\u9632\u75B2\u52B3",
     type: "dark",
     colorPreview: "#ffcc66",
     bgPreview: "#1f2430",
@@ -130,8 +158,8 @@ export const THEME_SCHEMES = {
     `
   },
   "light": {
-    name: "escook Light (经典浅色 · 典雅紫罗兰)",
-    desc: "Solarized 经典护眼暖米白搭配典雅紫罗兰与青墨文本，温润纸质书卷感",
+    name: "escook Light (\u7ECF\u5178\u6D45\u8272 \xB7 \u5178\u96C5\u7D2B\u7F57\u5170)",
+    desc: "Solarized \u7ECF\u5178\u62A4\u773C\u6696\u7C73\u767D\u642D\u914D\u5178\u96C5\u7D2B\u7F57\u5170\u4E0E\u9752\u58A8\u6587\u672C\uFF0C\u6E29\u6DA6\u7EB8\u8D28\u4E66\u5377\u611F",
     type: "light",
     colorPreview: "#705697",
     bgPreview: "#fdf6e3",
@@ -193,8 +221,8 @@ export const THEME_SCHEMES = {
     `
   },
   "light-soft": {
-    name: "escook Light Soft (柔和浅色 · 活力柔和橙)",
-    desc: "现代极简清透浅灰搭配柔和活力橙，明亮清爽不刺眼",
+    name: "escook Light Soft (\u67D4\u548C\u6D45\u8272 \xB7 \u6D3B\u529B\u67D4\u548C\u6A59)",
+    desc: "\u73B0\u4EE3\u6781\u7B80\u6E05\u900F\u6D45\u7070\u642D\u914D\u67D4\u548C\u6D3B\u529B\u6A59\uFF0C\u660E\u4EAE\u6E05\u723D\u4E0D\u523A\u773C",
     type: "light",
     colorPreview: "#ff9940",
     bgPreview: "#fafafa",
@@ -256,16 +284,14 @@ export const THEME_SCHEMES = {
     `
   }
 };
-
-export default function activate(context) {
-  // 环境感知与防冲突协同：若宿主环境为 DSH Desktop 客户端且已原生内置主题，自动注册最新主题并委派托管
+function activate(context) {
   if (typeof window !== "undefined" && window.__DSH_BUILTIN_THEMES__) {
-    console.info("🌸 [dsh-theme-escook] 检测到当前处于 DSH Desktop 桌面端，正在将插件最新主题矩阵热同步至客户端...");
+    console.info("\u{1F338} [dsh-theme-escook] \u68C0\u6D4B\u5230\u5F53\u524D\u5904\u4E8E DSH Desktop \u684C\u9762\u7AEF\uFF0C\u6B63\u5728\u5C06\u63D2\u4EF6\u6700\u65B0\u4E3B\u9898\u77E9\u9635\u70ED\u540C\u6B65\u81F3\u5BA2\u6237\u7AEF...");
     const builtin = window.__DSH_BUILTIN_THEMES__;
     if (typeof builtin.registerThemes === "function") {
       builtin.registerThemes(THEME_SCHEMES);
     }
-    const themeController = {
+    const themeController2 = {
       schemes: Object.keys(THEME_SCHEMES),
       setScheme(key) {
         builtin.apply(key);
@@ -274,24 +300,20 @@ export default function activate(context) {
         return builtin.getCurrent();
       },
       dispose() {
-        // 由桌面端原生管理生命周期
-        if (window.__ESCOOK_THEME__ === themeController) {
+        if (window.__ESCOOK_THEME__ === themeController2) {
           delete window.__ESCOOK_THEME__;
         }
       }
     };
-    window.__ESCOOK_THEME__ = themeController;
-    return themeController;
+    window.__ESCOOK_THEME__ = themeController2;
+    return themeController2;
   }
-
   const styleId = "dsh-theme-escook-styles";
   const storageKey = "dsh_theme_escook_scheme";
   let styleEl = document.getElementById(styleId);
-
   function applyScheme(key) {
     const validKey = THEME_SCHEMES[key] ? key : "dark-soft";
     const scheme = THEME_SCHEMES[validKey];
-
     if (!styleEl) {
       styleEl = document.createElement("style");
       styleEl.id = styleId;
@@ -301,17 +323,16 @@ export default function activate(context) {
     document.documentElement.setAttribute("data-dsh-theme", `escook-${validKey}`);
     try {
       localStorage.setItem(storageKey, validKey);
-    } catch (e) {}
-    console.info(`🌸 [dsh-theme-escook] 当前激活配色: ${scheme.name}`);
+    } catch (e) {
+    }
+    console.info(`\u{1F338} [dsh-theme-escook] \u5F53\u524D\u6FC0\u6D3B\u914D\u8272: ${scheme.name}`);
   }
-
   let savedScheme = "dark-soft";
   try {
     savedScheme = localStorage.getItem(storageKey) || localStorage.getItem("dsh_selected_theme") || "dark-soft";
-  } catch (e) {}
-
+  } catch (e) {
+  }
   applyScheme(savedScheme);
-
   const themeController = {
     schemes: Object.keys(THEME_SCHEMES),
     setScheme(key) {
@@ -334,13 +355,14 @@ export default function activate(context) {
       }
     }
   };
-
   window.__ESCOOK_THEME__ = themeController;
   return themeController;
 }
-
-// 宿主以 Cordis 插件对象激活模块，卸载时释放本插件拥有的资源。
-export const apply = (context) => {
+var apply = (context) => {
   const controller = activate(context);
   return () => controller.dispose();
 };
+
+    return module.exports;
+  }
+});
