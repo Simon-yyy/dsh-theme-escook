@@ -2,6 +2,12 @@
 
 All notable changes to `dsh-theme-escook` will be documented in this file.
 
+## [1.0.3] - 2026-10-02
+
+### 修复
+- 扩展主题运行时兼容范围，支持 DeepSeek Harness `0.2.0-rc.2` 及后续 `0.2` 版本，保留旧版支持并阻止未经适配的 `0.3` 版本。
+- 新增运行时兼容边界回归测试，并将客户端入口及主题变量检查纳入 `npm test`。
+
 ## [1.0.2] - 2026-09-25
 
 ### Fixed
